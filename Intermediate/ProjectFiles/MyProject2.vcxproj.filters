@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\MyProject2.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{AE8BE464-7E48-4037-B253-8F43C8C084A6}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\MyProject2.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\MyProject2Editor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{00C925A2-B684-4E37-B97C-5531F42D7D5C}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\MyProject2">
+      <UniqueIdentifier>{FDB84883-CFF1-41AA-9F93-4D6332156FD0}</UniqueIdentifier>
+    </Filter>
+    <ClCompile Include="..\..\Source\MyProject2\Chunk.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\Chunk.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject2\McCharacter.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\McCharacter.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject2\McGameMode.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\McGameMode.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <None Include="..\..\Source\MyProject2\MyProject2.Build.cs">
+      <Filter>Source\MyProject2</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\MyProject2\MyProject2.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\MyProject2.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\MyProject2\MyProject2GameModeBase.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\MyProject2\MyProject2GameModeBase.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Source\MyProject2\MapCreator.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\MyProject2\PunchSphereComponent.cpp">
+      <Filter>Source\MyProject2</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Source\MyProject2\MapCreator.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\MyProject2\PunchSphereComponent.h">
+      <Filter>Source\MyProject2</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
