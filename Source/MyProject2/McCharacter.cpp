@@ -11,10 +11,18 @@ AMcCharacter::AMcCharacter() {
 	// GetMesh()->SetCollisionProfileName(FName("OverlapAll"));
 
 	BaseCollisionComp = CreateDefaultSubobject<USphereComponent>(TEXT("PunchSphere"));
+	static ConstructorHelpers::FObjectFinder<UMaterial> Material(TEXT("Material'/Game/Materials/M_Floor.M_Floor'"));
+
+	if(Material.Object != NULL) {
+		UMaterial* TheMaterial = (UMaterial*) Material.Object;
+		UMaterialInstanceDynamic* TheMaterial_Dyn = UMaterialInstanceDynamic::Create(TheMaterial, BaseCollisionComp);
+		BaseCollisionComp->SetMaterial(0, TheMaterial_Dyn);
+	}
+
 	BaseCollisionComp->SetCollisionProfileName(FName("OverlapAll"));
 	BaseCollisionComp->SetCollisionResponseToChannel(ECC_EngineTraceChannel1, ECollisionResponse::ECR_Overlap);
 	BaseCollisionComp->OnComponentBeginOverlap.AddDynamic(this, &AMcCharacter::OnOverlapBegin);
-	BaseCollisionComp->AddRelativeLocation(FVector(200, 0, 0));
+	BaseCollisionComp->AddRelativeLocation(FVector(200, 0, -100));
 	BaseCollisionComp->SetCollisionEnabled(ECollisionEnabled::Type::QueryOnly);
 	BaseCollisionComp->AttachTo(RootComponent);
 

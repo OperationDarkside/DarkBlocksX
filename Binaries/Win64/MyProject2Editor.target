@@ -17,15 +17,15 @@
 	"BuildProducts" :
 	[
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-MyProject2-1776.dll",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-MyProject2-1820.dll",
 			"Type" : "DynamicLibrary"
 		},
 		{
-			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-MyProject2-1776.pdb",
+			"Path" : "$(ProjectDir)/Binaries/Win64/UE4Editor-MyProject2-1820.pdb",
 			"Type" : "SymbolFile"
 		},
 		{
-			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-MyProject2-1776.lib",
+			"Path" : "$(ProjectDir)/Intermediate/Build/Win64/UE4Editor/Development/UE4Editor-MyProject2-1820.lib",
 			"Type" : "ImportLibrary"
 		},
 		{

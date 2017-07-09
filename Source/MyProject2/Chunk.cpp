@@ -89,7 +89,7 @@ void AChunk::OnConstruction(const FTransform & Transform) {
 
 				switch(blocks[x][y][z]) {
 					case 1:
-						this->HISMC->AddInstance(FTransform(FVector(x * 200, z * 200, y * 200)));
+						this->HISMC->AddInstance(FTransform(FVector(x * 210, z * 210, y * 210)));
 						break;
 				}
 
@@ -115,7 +115,16 @@ void AChunk::OnConstruction(const FTransform & Transform) {
 void AChunk::OnOverlapBegin(class UPrimitiveComponent * srcComp, AActor * OtherActor, UPrimitiveComponent * OtherComp, int32 OtherBodyIndex, bool bFromSweep, const FHitResult & SweepResult) {
 	if((OtherActor != nullptr) && (OtherActor != this) && (OtherComp != nullptr)) {
 		if(GEngine) {
-			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString(TEXT("Block Overlap Index: %s")) + srcComp->GetFullName());
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString(TEXT("Block Overlap Index: %s")) + OtherComp->GetFName().ToString());
+
+			TArray<int32> instances = this->HISMC->GetInstancesOverlappingSphere(OtherComp->GetComponentTransform().GetLocation(), 50);
+
+			for(size_t i = 0; i < instances.Num(); i++) {
+				GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString(TEXT("Block Overlap Index: %i")) + FString::FromInt(instances[i]));
+			}
+			this->HISMC->RemoveInstances(instances);
+
+			GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Red, FString(TEXT("Block Overlap Index: %s")) + srcComp->GetFName().ToString());
 		}
 	}
 }
